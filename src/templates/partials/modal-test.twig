@@ -1,0 +1,225 @@
+<div class="modal modal-test {% if allModalView == true %}active{% endif %}" id="modal-test">
+    <div class="modal__container">
+        <div class="modal__header">
+            Тест по бренду Хуторок
+            <div class="modal__close" data-modal-close>
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 18.5L18 6.5M6 6.5L18 18.5" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="modal__body">
+            <div class="test">
+                <div class="test__stat">
+                    <div class="test__pass">
+                        <span id="progress">0%</span>
+                        Пройдено
+                    </div>
+                    <div class="test__quests">
+                        <span id="current-question">*</span>
+                        из 
+                        <span id="total-questions">*</span>
+                        вопросов
+                    </div>
+                </div>
+                <div class="test__bar">
+                    <span style="width: 0%" id="progress-bar"></span>
+                </div>
+                <form class="test__container">
+                    <div class="test__item active">
+                        <div class="test__num">
+                            Вопрос 1
+                        </div>
+                        <div class="test__quest">
+                            Продолжите фразу: Коллекция Хуторок – это …
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Самодельные напитки на основе спирта «Альфа»
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Коллекция сладких и горьких настоек
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Душевность и хлебосольность русского Юга
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="modal__button" data-next-question disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                    <div class="test__item">
+                        <div class="test__num">
+                            Вопрос 2
+                        </div>
+                        <div class="test__quest">
+                            Перечислите все продукты, которые входят в коллекцию Хуторок?
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Хуторок душевная, Хуторок домашняя на меду с хреном,  Хуторок на деревенских яблочках, Хуторок сливовица станичная
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Хуторок классическая, Хуторок домашняя, Хуторок на меду, Хуторок оригинальная
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Хуторок классическая, Хуторок домашняя, Хуторок на меду, Хуторок на деревенских яблочках
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="modal__button" data-next-question disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                    <div class="test__item">
+                        <div class="test__num">
+                            Вопрос 3
+                        </div>
+                        <div class="test__quest">
+                            Сколько градусов в Хуторок домашняя на меду с хреном?
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    45%
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    40%
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    38%
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="modal__button" disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                    <div class="test__item">
+                        <div class="test__num">
+                            Вопрос 4
+                        </div>
+                        <div class="test__quest">
+                            Сколько градусов в сладких настойках Хуторок сливовица станичная и Хуторок на деревенских яблочках?
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    20%
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    33%
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    19%
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="modal__button" disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                    <div class="test__item">
+                        <div class="test__num">
+                            Вопрос 5
+                        </div>
+                        <div class="test__quest">
+                            Какие ингредиенты входят в состав сладких настоек Хуторок (выберите все подходящие ответы)
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Спирт  «Люкс» 
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Спирт «Альфа»
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Настои из трав и сухоцветов
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Мед
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Натуральные соки
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Настои из фруктов и ягод
+                                </div>
+                            </label>
+                        </div>
+                        <button type="submit" class="modal__button" disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal__overlay"></div>
+</div>

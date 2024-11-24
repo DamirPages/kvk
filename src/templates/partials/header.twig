@@ -1,0 +1,61 @@
+<header class="header">
+	<div class="wrapper">
+		<div class="menu-button">
+			<img src="./src/assets/img/menu.svg" alt="">
+		</div>
+
+		<a href="/" class="logo">
+			<img src="./src/assets/img/logo.svg" alt="">
+		</a>
+		
+		<nav class="menu">
+			<a href="#" class="menu__link" data-modal-open="#modal-rules">Правила акции</a>
+			<a href="./#products" class="menu__link">Продукция</a>
+			<a href="./#gifts" class="menu__link">Подарки</a>
+			<a href="#" class="menu__link" data-modal-open="#modal-contact">Связаться с нами</a>
+		</nav>
+
+		{% if isAuthorized == false %}
+		<button class="button" type="button" data-modal-open="#modal-login">
+			Войти
+		</button>
+		{% else %}
+		<div class="info">
+			<div class="prize">
+				<div class="prize__icon">
+					<img src="./src/assets/img/gift.svg" alt="">
+				</div>
+				<div class="prize__count">3</div>
+				<div class="prize__text">
+					баллов
+				</div>
+			</div>
+			<div class="logout" data-modal-open="#modal-logout">
+				<img src="./src/assets/img/logout.svg" alt="">
+			</div>
+		</div>
+		{% endif %}
+	</div>
+	{% if isCabinet == false %}
+	<div class="wrapper scroll-button">
+		<a href="#" class="button button-banner" data-modal-open="#modal-auth">УЧАСТВОВАТЬ</a>
+	</div>
+	{% endif %}
+
+	<div class="mobile-menu">
+		{% if landing == true %}
+			<div class="mobile-menu-link" data-modal-open="#modal-rules">Правила акции</div>
+			<a href="#products" class="mobile-menu-link" >Продукция</a>
+			<a href="#gifts" class="mobile-menu-link" >Подарки</a>
+			<div class="mobile-menu-link" data-modal-open="#modal-contact">Политика конфиденциальности</div>
+		{% else %}
+			<a href="./menu" class="mobile-menu-link">Пройти обучение</a>
+			<a href="./upload" class="mobile-menu-link">Загрузить чеки</a>
+			<a href="./trade" class="mobile-menu-link">Обменять баллы</a>
+			<div class="mobile-menu-link" data-modal-open="#modal-contact">Связаться с нами</div>
+			<div class="mobile-menu-link" data-modal-open="#modal-rules">Правила акции</div>
+			<div class="mobile-menu-link" data-modal-open="#modal-politic">Политика конфиденциальности</div>
+		{% endif %}
+		
+	</div>
+</header>
