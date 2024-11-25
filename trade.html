@@ -37,17 +37,19 @@
 		<header class="header">
 	<div class="wrapper">
 		<div class="menu-button">
-			<img src="./assets/img/menu.svg" alt="">
+			<img src="./assets/img/img/menu.svg" alt="">
 		</div>
 
-		<a href="/" class="logo">
-			<img src="./assets/img/logo.svg" alt="">
-		</a>
+		<div class="logo">
+			<img src="./assets/img/img/logo.svg" alt="">
+		</div>
 		
 		<nav class="menu">
 			<a href="#" class="menu__link" data-modal-open="#modal-rules">Правила акции</a>
-			<a href="./#products" class="menu__link">Продукция</a>
-			<a href="./#gifts" class="menu__link">Подарки</a>
+			
+				<a href="./#products" class="menu__link">Продукция</a>
+				<a href="./#gifts" class="menu__link">Подарки</a>
+			
 			<a href="#" class="menu__link" data-modal-open="#modal-contact">Связаться с нами</a>
 		</nav>
 
@@ -55,7 +57,7 @@
 		<div class="info">
 			<div class="prize">
 				<div class="prize__icon">
-					<img src="./assets/img/gift.svg" alt="">
+					<img src="./assets/img/img/gift.svg" alt="">
 				</div>
 				<div class="prize__count">3</div>
 				<div class="prize__text">
@@ -63,7 +65,7 @@
 				</div>
 			</div>
 			<div class="logout" data-modal-open="#modal-logout">
-				<img src="./assets/img/logout.svg" alt="">
+				<img src="./assets/img/img/logout.svg" alt="">
 			</div>
 		</div>
 		
@@ -87,12 +89,12 @@
 	
     <div class="trade-page">
     <div class="wrapper">
-        <div class="trade-page__back">
+        <a href="./menu" class="trade-page__back">
             <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.8647 10.0001L3.4303 10.0001M3.4303 10.0001L8.57579 15.1456M3.4303 10.0001L8.57579 4.85461" stroke="#98999E" stroke-width="1.14344" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             Вернуться на главную
-        </div>
+        </a>
         <div class="trade-page__title">
             Обменять баллы
         </div>
@@ -103,7 +105,7 @@
         <div class="trade-cards">
             <div class="trade-card">
                 <div class="trade-card__img">
-                    <img src="./assets/img/ozon-card.svg" alt="">
+                    <img src="./assets/img/img/ozon-card.svg" alt="">
                 </div>
                 <div class="trade-card__price">
                     500 ₽
@@ -111,7 +113,7 @@
             </div>
             <div class="trade-card">
                 <div class="trade-card__img">
-                    <img src="./assets/img/ozon-card.svg" alt="">
+                    <img src="./assets/img/img/ozon-card.svg" alt="">
                 </div>
                 <div class="trade-card__price">
                     1 000 ₽
@@ -119,7 +121,7 @@
             </div>
             <div class="trade-card">
                 <div class="trade-card__img">
-                    <img src="./assets/img/ozon-card.svg" alt="">
+                    <img src="./assets/img/img/ozon-card.svg" alt="">
                 </div>
                 <div class="trade-card__price">
                     1 500 ₽
@@ -127,7 +129,7 @@
             </div>
             <div class="trade-card">
                 <div class="trade-card__img">
-                    <img src="./assets/img/ozon-card.svg" alt="">
+                    <img src="./assets/img/img/ozon-card.svg" alt="">
                 </div>
                 <div class="trade-card__price">
                     2 000 ₽
@@ -135,7 +137,7 @@
             </div>
             <div class="trade-card">
                 <div class="trade-card__img">
-                    <img src="./assets/img/ozon-card.svg" alt="">
+                    <img src="./assets/img/img/ozon-card.svg" alt="">
                 </div>
                 <div class="trade-card__price">
                     3 000 ₽
@@ -143,7 +145,7 @@
             </div>
             <div class="trade-card">
                 <div class="trade-card__img">
-                    <img src="./assets/img/ozon-card.svg" alt="">
+                    <img src="./assets/img/img/ozon-card.svg" alt="">
                 </div>
                 <div class="trade-card__price">
                     4 000 ₽
@@ -151,7 +153,7 @@
             </div>
             <div class="trade-card">
                 <div class="trade-card__img">
-                    <img src="./assets/img/ozon-card.svg" alt="">
+                    <img src="./assets/img/img/ozon-card.svg" alt="">
                 </div>
                 <div class="trade-card__price">
                     5 000 ₽
@@ -159,7 +161,7 @@
             </div>
             <div class="trade-card">
                 <div class="trade-card__img">
-                    <img src="./assets/img/ozon-card.svg" alt="">
+                    <img src="./assets/img/img/ozon-card.svg" alt="">
                 </div>
                 <div class="trade-card__price">
                     8 000 ₽
@@ -193,22 +195,22 @@
         <div class="modal__text">
             Необходимо указывать действующий E-mail к которому вы имеете доступ
         </div>
-        <form class="modal__form">
+        <form class="modal__form" data-disabled-button-form>
             <input type="text" class="input" placeholder="Тема сообщения" name="">
-            <input type="text" class="input" placeholder="E-mail" name="" required>
-            <textarea name="" class="textarea" placeholder="Текст сообщения..." id="" required></textarea>
-            <a href="#" class="modal__button" data-submit-button>
+            <input type="text" class="input" placeholder="E-mail" name="" required data-disabled-button-input>
+            <textarea name="" class="textarea" placeholder="Текст сообщения..." id="" required data-disabled-button-input></textarea>
+            <a href="#" class="modal__button disabled" data-submit-button>
                 Отправить
             </a>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button-checkbox>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
                     Настоящим подтверждаю, что я ознакомлен с <a href="#" data-modal-open="#modal-rules">правилами акции</a>
                 </div>
             </label>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button-checkbox>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
                     Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности и согласен на обработку персональных данных
@@ -272,7 +274,7 @@
             </div>
             <div class="footer__info">
                 <div class="footer__logo">
-                    <img src="./assets/img/logo-footer.svg" alt="">
+                    <img src="./assets/img/img/logo-footer.svg" alt="">
                 </div>
                 <div class="footer__button" data-modal-open="#modal-contact">
                     Связаться с нами

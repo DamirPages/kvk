@@ -40,17 +40,19 @@
 		<header class="header">
 	<div class="wrapper">
 		<div class="menu-button">
-			<img src="./assets/img/menu.svg" alt="">
+			<img src="./assets/img/img/menu.svg" alt="">
 		</div>
 
-		<a href="/" class="logo">
-			<img src="./assets/img/logo.svg" alt="">
-		</a>
+		<div class="logo">
+			<img src="./assets/img/img/logo.svg" alt="">
+		</div>
 		
 		<nav class="menu">
 			<a href="#" class="menu__link" data-modal-open="#modal-rules">Правила акции</a>
-			<a href="./#products" class="menu__link">Продукция</a>
-			<a href="./#gifts" class="menu__link">Подарки</a>
+			
+				<a href="./#products" class="menu__link">Продукция</a>
+				<a href="./#gifts" class="menu__link">Подарки</a>
+			
 			<a href="#" class="menu__link" data-modal-open="#modal-contact">Связаться с нами</a>
 		</nav>
 
@@ -88,18 +90,18 @@
                 Наслаждайся вкусом, побеждай!
             </div>
             <div class="banner__img">
-                <img src="./assets/img/banner-img.png" alt="">
+                <img src="./assets/img/img/banner-img.png" alt="">
             </div>
-            <div class="banner__button">
+            <div class="banner__button" data-modal-open="#modal-auth">
                 УЧАСТВОВАТЬ
             </div>
         </div>
         <div class="banner__img">
-            <img src="./assets/img/banner-img.png" alt="">
+            <img src="./assets/img/img/banner-img.png" alt="">
         </div>
     </div>
     <div class="banner__bg">
-        <img src="./assets/img/banner-bg.svg" alt="">
+        <img src="./assets/img/img/banner-bg.svg" alt="">
     </div>
 </div>
 	<div class="modal modal-auth active" id="modal-auth">
@@ -115,31 +117,31 @@
         <div class="modal__text">
             Необходимо указывать действующий E-mail к которому вы имеете доступ
         </div>
-        <form class="modal__form">
-            <input type="text" class="input" placeholder="Имя" name="" required>
-            <input type="text" class="input" placeholder="Тел." name="" required inputmode="numeric" data-tel-input>
-            <input type="text" class="input" placeholder="E-mail" name="" required>
+        <form class="modal__form" data-disabled-button-form>
+            <input type="text" class="input" placeholder="Имя" name="" required data-disabled-button-input>
+            <input type="text" class="input" placeholder="Тел." name="" required inputmode="numeric" data-tel-input data-disabled-button-input>
+            <input type="text" class="input" placeholder="E-mail" name="" required data-disabled-button-input>
             <div class="modal__form-group">
                 <div class="modal__button modal__button-second" data-modal-open="#modal-code">
                     Отправить код
                 </div>
-                <input type="text" class="input" placeholder="1234" name="" required>
+                <input type="text" class="input" placeholder="1234" inputmode="numeric" name="" required data-disabled-button-input>
             </div>
-            <a href="./upload.html" class="modal__button" data-submit-button>
+            <a href="./upload.html" class="modal__button disabled" data-submit-button>
                 Зарегистрироваться
             </a>
             <div class="modal-link-text" data-change-modal="#modal-login">
               Войти
             </div>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button-checkbox>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
                     Настоящим подтверждаю, что я ознакомлен с <a href="#" data-modal-open="#modal-rules">правилами акции</a>
                 </div>
             </label>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button-checkbox>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
                     Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности и согласен на обработку персональных данных
@@ -147,7 +149,7 @@
                 </div>
             </label>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button-checkbox>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
                     Я даю согласие на получение рассылки о предложениях, информации о продуктах/услугах и иной рекламной информации путем 
@@ -187,7 +189,7 @@
             </div>
             <div class="footer__info">
                 <div class="footer__logo">
-                    <img src="./assets/img/logo-footer.svg" alt="">
+                    <img src="./assets/img/img/logo-footer.svg" alt="">
                 </div>
                 <div class="footer__button" data-modal-open="#modal-contact">
                     Связаться с нами
