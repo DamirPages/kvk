@@ -172,19 +172,37 @@ if (headerButton) {
 	});
 }
 
-const disabledCheckboxs = document.querySelectorAll('[data-disabled-button]');
+const validateForms = document.querySelectorAll('[data-disabled-button-form]');
 
-disabledCheckboxs.forEach((checkbox) => {
-	checkbox.addEventListener('change', () => {
-		const button = checkbox.closest('form').querySelector('[data-submit-button]');
-		const formCheckboxs = checkbox.closest('form').querySelectorAll('[data-disabled-button]');
-		const someCheckboxChecked = Array.from(formCheckboxs).every((checkbox) => checkbox.checked);
+validateForms.forEach((form) => {
+	const button = form.querySelector('[data-submit-button]');
+	const inputs = form.querySelectorAll('[data-disabled-button-input]');
+	const checkboxs = form.querySelectorAll('[data-disabled-button-checkbox]');
 
-		if (someCheckboxChecked) {
-			button.classList.remove('disabled');
-		} else {
-			button.classList.add('disabled');
-		}
+	inputs.forEach((input) => {
+		input.addEventListener('input', () => {
+			const someInputFilled = Array.from(inputs).every((input) => input.value.length > 0);
+			const someCheckboxChecked = Array.from(checkboxs).every((checkbox) => checkbox.checked);
+
+			if (someInputFilled && someCheckboxChecked) {
+				button.classList.remove('disabled');
+			} else {
+				button.classList.add('disabled');
+			}
+		});
+	});
+
+	checkboxs.forEach((checkbox) => {
+		checkbox.addEventListener('change', () => {
+			const someInputFilled = Array.from(inputs).every((input) => input.value.length > 0);
+			const someCheckboxChecked = Array.from(checkboxs).every((checkbox) => checkbox.checked);
+
+			if (someInputFilled && someCheckboxChecked) {
+				button.classList.remove('disabled');
+			} else {
+				button.classList.add('disabled');
+			}
+		});
 	});
 });
 

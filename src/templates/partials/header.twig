@@ -4,14 +4,16 @@
 			<img src="./src/assets/img/menu.svg" alt="">
 		</div>
 
-		<a href="/" class="logo">
+		<div class="logo">
 			<img src="./src/assets/img/logo.svg" alt="">
-		</a>
+		</div>
 		
 		<nav class="menu">
 			<a href="#" class="menu__link" data-modal-open="#modal-rules">Правила акции</a>
-			<a href="./#products" class="menu__link">Продукция</a>
-			<a href="./#gifts" class="menu__link">Подарки</a>
+			{% if isEducation != true %}
+				<a href="./#products" class="menu__link">Продукция</a>
+				<a href="./#gifts" class="menu__link">Подарки</a>
+			{% endif %}
 			<a href="#" class="menu__link" data-modal-open="#modal-contact">Связаться с нами</a>
 		</nav>
 
