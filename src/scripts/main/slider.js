@@ -6,6 +6,7 @@ if (swiperContainer) {
 	const buttonPrev = swiperContainer.querySelector('.swiper-prev');
 	const buttonNext = swiperContainer.querySelector('.swiper-next');
 	const swiperSlider = swiperContainer.querySelector('.mySwiper');
+	const bullets = swiperContainer.querySelector('.bullets');
 
 	var swiper = new Swiper(swiperSlider, {
 		slidesPerView: 8,
@@ -16,6 +17,9 @@ if (swiperContainer) {
 		navigation: {
 			nextEl: buttonNext,
 			prevEl: buttonPrev,
+		},
+		pagination: {
+			el: bullets,
 		},
 		breakpoints: {
 			992: {

@@ -226,3 +226,22 @@ header.header{
 		font-size: 20px;
 	}
 }
+
+.swiper-next,
+.swiper-prev{
+	@media only screen and (max-width: 991px) {
+		display: none;
+	}
+}
+
+.bullets{
+	display: none;
+	justify-content: center;
+	margin-top: 20px;
+	@media only screen and (max-width: 991px) {
+		display: flex;
+	}
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+	background: #fff;
+}
